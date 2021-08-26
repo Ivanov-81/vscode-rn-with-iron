@@ -1,0 +1,15 @@
+export const THEME = {
+    MAIN_COLOR: "#fefce5",
+    MAIN_DARK_COLOR: "#efebce",
+    MAIN_BLACK_COLOR: "#253238",
+    DANGER_COLOR: "#FA8072",
+    DANGER_LITE_COLOR: "#ffaba2",
+    GINGER_COLOR: "#f6911d",
+    BLUE_DARK_COLOR: "#1577A4",
+    BLUE_COLOR: "#86D3E3",
+    BLUE_LITE_COLOR: "#85CEDD",
+    GRAY_DARK_COLOR: "#516067",
+    GRAY_COLOR: "#516067",
+    GRAY_LITE_COLOR: "#CBC6A1",
+    GREEN_COLOR: "#6CAA4F"
+}

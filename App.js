@@ -1,10 +1,14 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
-import { Text, View } from "react-native";
+import React, { useState, useRef } from "react";
+import { StatusBar, DrawerLayoutAndroid } from "react-native";
 import { AppLoading } from "expo";
 import { bootstrap } from "./src/bootstrap";
+import { AppNavigation } from "./src/navigation/AppNavigation";
+import { NotificationProvider } from "react-native-internal-notification";
+import { THEME } from "./src/theme";
+import { Drawer } from "./src/components/drawer/Drawer";
 
 export default function App() {
+  const drawer = useRef(null);
   const [isReady, setIsReady] = useState(false);
 
   if (isReady) {
@@ -18,9 +22,20 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NotificationProvider>
+      <StatusBar
+        animated={true}
+        backgroundColor={THEME.MAIN_BLACK_COLOR}
+        color={THEME.MAIN_DARK_COLOR}
+      />
+      <DrawerLayoutAndroid
+        ref={drawer}
+        drawerWidth={300}
+        drawerPosition="left"
+        renderNavigationView={() => <Drawer drawer={drawer} />}
+      >
+        <AppNavigation />
+      </DrawerLayoutAndroid>
+    </NotificationProvider>
   );
 }
