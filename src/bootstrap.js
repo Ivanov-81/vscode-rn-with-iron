@@ -1,8 +1,10 @@
 import * as Font from "expo-font";
+import { OpenBold } from "../assets/fonts/OpenSans-Bold.ttf";
+import { OpenRegular } from "../assets/fonts/OpenSans-Regular.ttf";
 
 export async function bootstrap() {
-    await Font.loadAsync({
-        'open-bold': require('../assets/fonts/OpenSans-Bold.ttf'),
-        'open-regular': require('../assets/fonts/OpenSans-Regular.ttf')
-    })
+  await Font.loadAsync({
+    OpenBold,
+    OpenRegular
+  });
 }

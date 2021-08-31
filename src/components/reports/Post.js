@@ -21,7 +21,6 @@ export const Post = ({ check }) => {
               ? <FontAwesome name="credit-card" size={24} color={THEME.GRAY_DARK_COLOR} />
               : <FontAwesome name="money" size={24} color={THEME.GRAY_DARK_COLOR} />
           }
-        
       </View>
       <Text style={styles.info}></Text>
     </View>
@@ -36,20 +35,22 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: THEME.GRAY_DARK_COLOR,
     padding: 8,
+    backgroundColor: THEME.MAIN_COLOR
   },
   title: {
     color: THEME.MAIN_BLACK_COLOR,
-    fontFamily: "open-bold",
+    // fontFamily: "OpenBold",
     minHeight: 20,
     fontSize: 13,
   },
   trader: {
     color: THEME.MAIN_BLACK_COLOR,
-    fontFamily: "open-regular",
+    fontFamily: "OpenRegular",
     fontSize: 13,
   },
   block1: {
     flexDirection: "row",
+    backgroundColor: THEME.MAIN_COLOR
   },
   block2: {
     flexDirection: "row",
@@ -58,13 +59,13 @@ const styles = StyleSheet.create({
   },
   date: {
     color: THEME.MAIN_BLACK_COLOR,
-    fontFamily: "open-regular",
+    fontFamily: "OpenRegular",
     fontSize: 13,
     marginLeft: 15
   },
   info: {
     color: THEME.MAIN_BLACK_COLOR,
-    fontFamily: "open-regular",
+    fontFamily: "OpenRegular",
     fontSize: 13,
   },
 });
